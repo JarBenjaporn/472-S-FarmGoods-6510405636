@@ -35,7 +35,7 @@ jobs:
           fi
           
       - name: Build Docker image
-        run: docker build -t farmgoods:develop .
+        run: docker build -t farmgoods:develop -f prod.Dockerfile .
         
   build-and-release-main:
     if: github.ref == 'refs/heads/main'
